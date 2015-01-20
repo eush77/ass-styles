@@ -21,6 +21,7 @@ ass-restyler Default:MarginV=335 Default:Fontsize+=10 <input.ass >output.ass
 
 - [Wikipedia page](http://en.wikipedia.org/wiki/SubStation_Alpha)
 - [format specification](http://www.perlfu.co.uk/projects/asa/ass-specs.doc)
+- [ASS styles](http://docs.aegisub.org/3.2/Styles/)
 
 ## Install
 
