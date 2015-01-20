@@ -1,0 +1,26 @@
+{
+  "name": "ass-restyler",
+  "version": "0.0.0",
+  "description": "Change SSA/ASS subtitle styles",
+  "author": "Eugene Sharygin <eush77@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/eush77/ass-restyler",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eush77/ass-restyler"
+  },
+  "bugs": {
+    "url": "https://github.com/eush77/ass-restyler/issues"
+  },
+  "keywords": [
+    "SSA",
+    "ASS",
+    "subtitle",
+    "style",
+    "styles",
+    "subtitles",
+    "cli"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}
