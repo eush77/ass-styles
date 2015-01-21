@@ -11,7 +11,7 @@ Small utility for changing SSA/ASS subtitle styles. Check out its [CLI interface
 
 ## Example
 
-```
+```js
 var parse = require('ass-parser');
 var restyle = require('ass-restyler');
 var stringify = require('ass-stringify');
