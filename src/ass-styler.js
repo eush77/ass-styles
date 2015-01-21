@@ -2,7 +2,8 @@
 
 var styleMap = require('./stylemap');
 
-var assParser = require('ass-parser');
+var parse = require('ass-parser')
+  , stringify = require('ass-stringify');
 
 
 var protoAssStyler = {
@@ -12,13 +13,13 @@ var protoAssStyler = {
   },
 
   text: function () {
-    return JSON.stringify(this.ass, null, 4);
+    return stringify(this.ass);
   }
 };
 
 
-module.exports = function (text) {
-  var ass = assParser(text, { comments: true });
+module.exports = function (sub) {
+  var ass = parse(sub, { comments: true });
 
   return Object.create(protoAssStyler, {
     ass: {
