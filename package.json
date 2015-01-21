@@ -1,7 +1,7 @@
 {
   "name": "ass-restyler",
   "version": "0.0.0",
-  "description": "Change SSA/ASS subtitle styles",
+  "description": "Change SSA/ASS subtitle styles (from the command line)",
   "author": "Eugene Sharygin <eush77@gmail.com>",
   "license": "MIT",
   "preferGlobal": true,
