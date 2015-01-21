@@ -44,7 +44,7 @@ Set the value of the property in the specific style.
 
 ### `restyler.value`
 
-Subtitle being edited. It is the same subtitle (same by identity) as in the original `assRestyler` call.
+Subtitle being edited. It is the same subtitle (same by identity) as in the original `assRestyler` call, saved for convenience.
 
 ## References
 
