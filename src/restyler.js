@@ -6,7 +6,7 @@ var parse = require('ass-parser')
   , stringify = require('ass-stringify');
 
 
-var protoAssStyler = {
+var protoRestyler = {
   get: function (style, property) {
     return this.styles[style][property];
   },
@@ -25,7 +25,7 @@ var protoAssStyler = {
 module.exports = function (sub) {
   var ass = parse(sub, { comments: true });
 
-  return Object.create(protoAssStyler, {
+  return Object.create(protoRestyler, {
     ass: {
       enumerable: true,
       value: ass

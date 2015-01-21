@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 
-var Styler = require('./src/ass-styler')
+var Restyler = require('./src/restyler')
   , Clause = require('./src/clause');
 
 var concat = require('concat-stream');
@@ -19,13 +19,13 @@ var usage = function () {
 
 var main = function () {
   process.stdin.pipe(concat({ encoding: 'string' }, function (text) {
-    var styler = Styler(text);
+    var restyler = Restyler(text);
 
     argv.forEach(function (expr) {
-      Clause(expr)(styler);
+      Clause(expr)(restyler);
     });
 
-    console.log(styler.text());
+    console.log(restyler.text());
   }));
 };
 

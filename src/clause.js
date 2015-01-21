@@ -10,16 +10,16 @@ module.exports = function (expr) {
   var value = m[4];
 
   if (!modifier) {
-    return function (styler) {
-      styler.set(style, property, value);
+    return function (restyler) {
+      restyler.set(style, property, value);
     };
   }
   else {
     value = Number(value);
-    return function (styler) {
-      var oldValue = +styler.get(style, property);
+    return function (restyler) {
+      var oldValue = +restyler.get(style, property);
       var newValue = (modifier == '+') ? oldValue + value : oldValue - value;
-      return styler.set(style, property, newValue);
+      return restyler.set(style, property, newValue);
     };
   }
 };
