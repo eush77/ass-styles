@@ -27,6 +27,26 @@ Clauses:
   - `Style:Property+=Value` (if it makes sense for the property)
   - `Style:Property-=Value` (if it makes sense for the property)
 
+## API
+
+### `restyler = assRestyler(ass)`
+
+Returns the restyler wrapper for the subtitle.
+
+`ass` - subtitle in the [ass-parser](https://www.npmjs.com/packages/ass-parser) format.
+
+### `restyler.get(style, property)`
+
+Get the value of the property in the specific style.
+
+### `restyler.set(style, property, value)`
+
+Set the value of the property in the specific style.
+
+### `restyler.value`
+
+Subtitle being edited. It is the same subtitle (same by identity) as in the original `assRestyler` call.
+
 ## References
 
 - [Wikipedia page](http://en.wikipedia.org/wiki/SubStation_Alpha)
