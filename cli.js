@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 'use strict';
 
-var Styler = require('./src/ass-styler');
+var Styler = require('./src/ass-styler')
+  , Clause = require('./src/clause');
 
 var concat = require('concat-stream');
 
@@ -21,8 +22,7 @@ var main = function () {
     var styler = Styler(text);
 
     argv.forEach(function (expr) {
-      var m = expr.match(/^([^.]+)\.([^.]+)=(.*)$/);
-      styler.set(m[1], m[2], m[3]);
+      Clause(expr)(styler);
     });
 
     console.log(styler.text());

@@ -7,6 +7,10 @@ var parse = require('ass-parser')
 
 
 var protoAssStyler = {
+  get: function (style, property) {
+    return this.styles[style][property];
+  },
+
   set: function (style, property, value) {
     this.styles[style][property] = value;
     return this;
