@@ -17,6 +17,16 @@ ass-restyler Default:MarginV=335 Default:Fontsize+=10 <input.ass >output.ass
 
 ## CLI
 
+```
+ass-restyler [clause]... <input.ass >output.ass
+ass-restyler --help
+```
+
+Clauses:
+  - `Style:Property=Value`
+  - `Style:Property+=Value` (if it makes sense for the property)
+  - `Style:Property-=Value` (if it makes sense for the property)
+
 ## References
 
 - [Wikipedia page](http://en.wikipedia.org/wiki/SubStation_Alpha)
