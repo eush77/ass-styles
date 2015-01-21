@@ -1,6 +1,6 @@
 'use strict';
 
-var styleMap = require('./stylemap');
+var styleMap = require('./src/stylemap');
 
 
 var protoRestyler = {

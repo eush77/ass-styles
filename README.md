@@ -4,7 +4,7 @@
 
 [![Dependency Status][david-badge]][david]
 
-Change SSA/ASS subtitle styles.
+Small utility for changing SSA/ASS subtitle styles. Check out its [CLI interface](https://www.npmjs.com/packages/ass-restyler-cli).
 
 [david]: https://david-dm.org/eush77/ass-restyler
 [david-badge]: https://david-dm.org/eush77/ass-restyler.png
@@ -12,20 +12,19 @@ Change SSA/ASS subtitle styles.
 ## Example
 
 ```
-ass-restyler Default:MarginV=335 Default:Fontsize+=10 <input.ass >output.ass
-```
+var parse = require('ass-parser');
+var restyle = require('ass-restyler');
+var stringify = require('ass-stringify');
 
-## CLI
+var subtitle = fs.readFileSync('subtitle.ass', { encoding: 'utf8' });
+var ass = parse(subtitle, { comments: true });
+var restyler = restyle(ass);
 
-```
-ass-restyler [clause]... <input.ass >output.ass
-ass-restyler --help
-```
+restyler.set('Default', 'MarginV', 335);
+restyler.set('Default', 'Fontsize', restyler.get('Default', 'Fontsize'));
 
-Clauses:
-  - `Style:Property=Value`
-  - `Style:Property+=Value` (if it makes sense for the property)
-  - `Style:Property-=Value` (if it makes sense for the property)
+console.log(stringify(restyler.value));
+```
 
 ## API
 
@@ -56,7 +55,7 @@ Subtitle being edited. It is the same subtitle (same by identity) as in the orig
 ## Install
 
 ```shell
-npm install ass-restyler -g
+npm install ass-restyler
 ```
 
 ## License
