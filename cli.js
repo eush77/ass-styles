@@ -4,7 +4,9 @@
 var Restyler = require('./src/restyler')
   , Clause = require('./src/clause');
 
-var concat = require('concat-stream');
+var concat = require('concat-stream')
+  , parse = require('ass-parser')
+  , stringify = require('ass-stringify');
 
 var fs = require('fs');
 
@@ -18,14 +20,14 @@ var usage = function () {
 
 
 var main = function () {
-  process.stdin.pipe(concat({ encoding: 'string' }, function (text) {
-    var restyler = Restyler(text);
+  process.stdin.pipe(concat({ encoding: 'string' }, function (sub) {
+    var restyler = Restyler(parse(sub, { comments: true }));
 
     argv.forEach(function (expr) {
       Clause(expr)(restyler);
     });
 
-    console.log(restyler.text());
+    console.log(stringify(restyler.value));
   }));
 };
 

@@ -2,9 +2,6 @@
 
 var styleMap = require('./stylemap');
 
-var parse = require('ass-parser')
-  , stringify = require('ass-stringify');
-
 
 var protoRestyler = {
   get: function (style, property) {
@@ -14,25 +11,17 @@ var protoRestyler = {
   set: function (style, property, value) {
     this.styles[style][property] = value;
     return this;
-  },
-
-  text: function () {
-    return stringify(this.ass);
   }
 };
 
 
-module.exports = function (sub) {
-  var ass = parse(sub, { comments: true });
-
+module.exports = function (ass) {
   return Object.create(protoRestyler, {
-    ass: {
+    value: {
       enumerable: true,
       value: ass
     },
     styles: {
-      enumerable: true,
-      writable: true,
       value: styleMap(ass)
     }
   });
