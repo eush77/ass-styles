@@ -4,10 +4,14 @@
   "description": "Change SSA/ASS subtitle styles",
   "author": "Eugene Sharygin <eush77@gmail.com>",
   "license": "MIT",
+  "preferGlobal": true,
   "bin": {
     "ass-restyler": "cli.js"
   },
-  "preferGlobal": true,
+  "files": [
+    "cli.js",
+    "src"
+  ],
   "homepage": "https://github.com/eush77/ass-restyler",
   "repository": {
     "type": "git",
