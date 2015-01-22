@@ -1,0 +1,195 @@
+[
+    {
+        "section": "Some Stuff",
+        "body": [
+            {
+                "key": "Key",
+                "value": "Value"
+            },
+            {
+                "key": "Key",
+                "value": "Value"
+            }
+        ]
+    },
+    {
+        "section": "V4 Styles",
+        "body": [
+            {
+                "key": "Format",
+                "value": [
+                    "Name",
+                    "Fontname",
+                    "Fontsize",
+                    "PrimaryColour",
+                    "SecondaryColour",
+                    "TertiaryColour",
+                    "BackColour",
+                    "Bold",
+                    "Italic",
+                    "BorderStyle",
+                    "Outline",
+                    "Shadow",
+                    "Alignment",
+                    "MarginL",
+                    "MarginR",
+                    "MarginV",
+                    "AlphaLevel",
+                    "Encoding"
+                ]
+            },
+            {
+                "key": "Style",
+                "value": {
+                    "Name": "DefaultVCD",
+                    "Fontname": "Comic Sans",
+                    "Fontsize": "28",
+                    "PrimaryColour": "11861244",
+                    "SecondaryColour": "11861244",
+                    "TertiaryColour": "11861244",
+                    "BackColour": "-2147483640",
+                    "Bold": "2",
+                    "Italic": "0",
+                    "BorderStyle": "1",
+                    "Outline": "1",
+                    "Shadow": "2",
+                    "Alignment": "2",
+                    "MarginL": "30",
+                    "MarginR": "30",
+                    "MarginV": "30",
+                    "AlphaLevel": "0",
+                    "Encoding": "0"
+                }
+            }
+        ]
+    },
+    {
+        "section": "More Stuff",
+        "body": []
+    },
+    {
+        "section": "V4+ Styles",
+        "body": [
+            {
+                "type": "comment",
+                "value": "; IDK if this is possible though."
+            },
+            {
+                "type": "comment",
+                "value": "; I mean more than one styles section."
+            },
+            {
+                "key": "Format",
+                "value": [
+                    "Name",
+                    "Fontname",
+                    "Fontsize",
+                    "PrimaryColour",
+                    "SecondaryColour",
+                    "OutlineColour",
+                    "BackColour",
+                    "Bold",
+                    "Italic",
+                    "Underline",
+                    "StrikeOut",
+                    "ScaleX",
+                    "ScaleY",
+                    "Spacing",
+                    "Angle",
+                    "BorderStyle",
+                    "Outline",
+                    "Shadow",
+                    "Alignment",
+                    "MarginL",
+                    "MarginR",
+                    "MarginV",
+                    "Encoding"
+                ]
+            },
+            {
+                "key": "Style",
+                "value": {
+                    "Name": "Default",
+                    "Fontname": "Comic Sans",
+                    "Fontsize": "50",
+                    "PrimaryColour": "&H00F1F1F9",
+                    "SecondaryColour": "&H00FF00FF",
+                    "OutlineColour": "&H006A0037",
+                    "BackColour": "&H00000000",
+                    "Bold": "-1",
+                    "Italic": "0",
+                    "Underline": "0",
+                    "StrikeOut": "0",
+                    "ScaleX": "100",
+                    "ScaleY": "100",
+                    "Spacing": "0",
+                    "Angle": "0",
+                    "BorderStyle": "1",
+                    "Outline": "1.2",
+                    "Shadow": "0",
+                    "Alignment": "2",
+                    "MarginL": "30",
+                    "MarginR": "30",
+                    "MarginV": "335",
+                    "Encoding": "1"
+                }
+            },
+            {
+                "key": "Style",
+                "value": {
+                    "Name": "Overlap",
+                    "Fontname": "Comic Sans",
+                    "Fontsize": "50",
+                    "PrimaryColour": "&H00F1F1F9",
+                    "SecondaryColour": "&H00000000",
+                    "OutlineColour": "&H00AB1045",
+                    "BackColour": "&H00000000",
+                    "Bold": "-1",
+                    "Italic": "0",
+                    "Underline": "0",
+                    "StrikeOut": "0",
+                    "ScaleX": "100",
+                    "ScaleY": "100",
+                    "Spacing": "0",
+                    "Angle": "0",
+                    "BorderStyle": "1",
+                    "Outline": "0.8",
+                    "Shadow": "2",
+                    "Alignment": "2",
+                    "MarginL": "20",
+                    "MarginR": "20",
+                    "MarginV": "36",
+                    "Encoding": "1"
+                }
+            },
+            {
+                "key": "Style",
+                "value": {
+                    "Name": "credits",
+                    "Fontname": "Comic Sans",
+                    "Fontsize": "42",
+                    "PrimaryColour": "&H00FFFFFF",
+                    "SecondaryColour": "&H000000FF",
+                    "OutlineColour": "&H00000000",
+                    "BackColour": "&H00000000",
+                    "Bold": "-1",
+                    "Italic": "0",
+                    "Underline": "0",
+                    "StrikeOut": "0",
+                    "ScaleX": "100",
+                    "ScaleY": "100",
+                    "Spacing": "0",
+                    "Angle": "0",
+                    "BorderStyle": "2",
+                    "Outline": "2",
+                    "Shadow": "0",
+                    "Alignment": "2",
+                    "MarginL": "10",
+                    "MarginR": "10",
+                    "MarginV": "10",
+                    "Encoding": "1"
+                }
+            }
+        ]
+    }
+]

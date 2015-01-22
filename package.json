@@ -4,6 +4,9 @@
   "description": "Change SSA/ASS subtitle styles",
   "author": "Eugene Sharygin <eush77@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
   "files": [
     "index.js",
     "src"
@@ -25,5 +28,8 @@
     "subtitles"
   ],
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "strformat": "0.0.3",
+    "tape": "^3.4.0"
+  }
 }
