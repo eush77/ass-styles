@@ -2,10 +2,12 @@
 
 # ass-restyler
 
-[![Dependency Status][david-badge]][david]
+[![Build Status][travis-badge]][travis] [![Dependency Status][david-badge]][david]
 
 Small utility for changing SSA/ASS subtitle styles. Check out its [CLI interface](https://www.npmjs.com/packages/ass-restyler-cli).
 
+[travis]: https://travis-ci.org/eush77/ass-restyler
+[travis-badge]: https://travis-ci.org/eush77/ass-restyler.svg
 [david]: https://david-dm.org/eush77/ass-restyler
 [david-badge]: https://david-dm.org/eush77/ass-restyler.png
 
