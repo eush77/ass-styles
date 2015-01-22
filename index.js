@@ -9,7 +9,7 @@ var protoRestyler = {
   },
 
   set: function (style, property, value) {
-    this.styles[style][property] = value;
+    this.styles[style][property] = String(value);
     return this;
   }
 };

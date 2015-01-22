@@ -36,11 +36,15 @@ Returns the restyler wrapper for the subtitle.
 
 ### `restyler.get(style, property)`
 
-Get the value of the property in the specific style.
+Get value of the property in the specific style.
+
+Return value is a string.
 
 ### `restyler.set(style, property, value)`
 
-Set the value of the property in the specific style.
+Set value of the property in the specific style.
+
+If `value` is not a string, it is converted to string.
 
 ### `restyler.value`
 
