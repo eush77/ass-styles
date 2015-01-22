@@ -23,7 +23,7 @@ var ass = parse(subtitle, { comments: true });
 var restyler = restyle(ass);
 
 restyler.set('Default', 'MarginV', 335);
-restyler.set('Default', 'Fontsize', +restyler.get('Default', 'Fontsize') + 10);
+restyler.set('Default', 'Fontsize', Number(restyler.get('Default', 'Fontsize')) + 10);
 
 console.log(stringify(restyler.value));
 ```
