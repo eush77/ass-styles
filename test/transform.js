@@ -18,9 +18,10 @@ var transform = function (restyler) {
     restyler.set(r[0], r[1], r[2]);
   });
 
-  restyler.set('DefaultVCD', 'Bold', Number(restyler.get('DefaultVCD', 'Bold')) + 3);
-  restyler.set('Overlap', 'Shadow', Number(restyler.get('Overlap', 'Shadow')) + 0.5);
-  restyler.set('credits', 'BorderStyle', restyler.get('credits', 'BorderStyle') * 2);
+  restyler
+    .set('DefaultVCD', 'Bold', Number(restyler.get('DefaultVCD', 'Bold')) + 3)
+    .set('Overlap', 'Shadow', Number(restyler.get('Overlap', 'Shadow')) + 0.5)
+    .set('credits', 'BorderStyle', restyler.get('credits', 'BorderStyle') * 2);
 
   return restyler;
 };

@@ -48,6 +48,8 @@ Set value of the property in the specific style.
 
 If `value` is not a string, it is converted to string.
 
+Returns `restyler`.
+
 ### `restyler.value`
 
 Subtitle being edited. It is the same subtitle (same by identity) as in the original `assRestyler` call, saved for convenience.
