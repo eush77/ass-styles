@@ -1,23 +1,19 @@
 {
-  "name": "ass-restyler",
+  "name": "ass-styles",
   "version": "0.1.0",
-  "description": "Change SSA/ASS subtitle styles",
+  "description": "Extract styles from SSA/ASS subtitles, edit & save back",
   "author": "Eugene Sharygin <eush77@gmail.com>",
   "license": "MIT",
   "scripts": {
     "test": "tape test/*.js"
   },
-  "files": [
-    "index.js",
-    "src"
-  ],
-  "homepage": "https://github.com/eush77/ass-restyler",
+  "homepage": "https://github.com/eush77/ass-styles",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eush77/ass-restyler"
+    "url": "https://github.com/eush77/ass-styles"
   },
   "bugs": {
-    "url": "https://github.com/eush77/ass-restyler/issues"
+    "url": "https://github.com/eush77/ass-styles/issues"
   },
   "keywords": [
     "SSA",
@@ -25,7 +21,8 @@
     "subtitle",
     "style",
     "styles",
-    "subtitles"
+    "subtitles",
+    "styling"
   ],
   "dependencies": {},
   "devDependencies": {
