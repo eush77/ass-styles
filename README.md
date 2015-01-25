@@ -40,6 +40,8 @@ Returns the object containing all the styles from all the styling sections.
 
 `styles[style][attribute]` is a value of the attribute in the specific style. It is usually a string and should always be expected to be a string.
 
+However, you can't add a new style or erase an existing one, but why would you?
+
 ## References
 
 - [Wikipedia page](http://en.wikipedia.org/wiki/SubStation_Alpha)
