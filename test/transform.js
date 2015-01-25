@@ -1,11 +1,11 @@
 'use strict';
 
-var Restyler = require('..');
+var Styles = require('..');
 
 var test = require('tape');
 
 
-var transform = function (restyler) {
+var transform = function (styles) {
   var replacements = [
     ['DefaultVCD', 'Fontname', 'Comic Sans'],
     ['Default', 'Fontname', 'Comic Sans'],
@@ -15,20 +15,20 @@ var transform = function (restyler) {
   ];
 
   replacements.forEach(function (r) {
-    restyler.set(r[0], r[1], r[2]);
+    styles[r[0]][r[1]] = r[2];
   });
 
-  restyler
-    .set('DefaultVCD', 'Bold', Number(restyler.get('DefaultVCD', 'Bold')) + 3)
-    .set('Overlap', 'Shadow', Number(restyler.get('Overlap', 'Shadow')) + 0.5)
-    .set('credits', 'BorderStyle', restyler.get('credits', 'BorderStyle') * 2);
+  styles.DefaultVCD.Bold = Number(styles.DefaultVCD.Bold) + 3;
+  styles.Overlap.Shadow = Number(styles.Overlap.Shadow) + 0.5;
+  styles.credits.BorderStyle = styles.credits.BorderStyle * 2;
 
-  return restyler;
+  return styles;
 };
 
 
 test('transform', function (t) {
-  var restyler = Restyler(require('./before.json'));
-  t.deepEqual(transform(restyler).value, require('./after.json'));
+  var ass = require('./before.json');
+  transform(Styles(ass));
+  t.deepEqual(ass, require('./after.json'));
   t.end();
 });

@@ -1,6 +1,6 @@
 'use strict';
 
-var Restyler = require('..');
+var Styles = require('..');
 
 var test = require('tape')
   , strformat = require('strformat');
@@ -19,10 +19,10 @@ var facts = [
 
 
 test('query', function (t) {
-  var restyler = Restyler(require('./before.json'));
+  var styles = Styles(require('./before.json'));
 
   facts.forEach(function (f) {
-    t.equal(restyler.get(f[0], f[1]), f[2],
+    t.equal(styles[f[0]][f[1]], f[2],
             strformat('{0}:{1} == "{2}"', f));
   });
 
