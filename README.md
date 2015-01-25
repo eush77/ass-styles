@@ -1,58 +1,44 @@
-[![npm](https://nodei.co/npm/ass-restyler.png)](https://nodei.co/npm/ass-restyler/)
+[![npm](https://nodei.co/npm/ass-styles.png)](https://nodei.co/npm/ass-styles/)
 
-# ass-restyler
+# ass-styles
 
 [![Build Status][travis-badge]][travis] [![Dependency Status][david-badge]][david]
 
-Small utility for changing SSA/ASS subtitle styles. Check out its [CLI interface](https://www.npmjs.com/packages/ass-restyler-cli).
+Extract styles from SSA/ASS subtitles, edit & save back.
 
-[travis]: https://travis-ci.org/eush77/ass-restyler
-[travis-badge]: https://travis-ci.org/eush77/ass-restyler.svg
-[david]: https://david-dm.org/eush77/ass-restyler
-[david-badge]: https://david-dm.org/eush77/ass-restyler.png
+[travis]: https://travis-ci.org/eush77/ass-styles
+[travis-badge]: https://travis-ci.org/eush77/ass-styles.svg
+[david]: https://david-dm.org/eush77/ass-styles
+[david-badge]: https://david-dm.org/eush77/ass-styles.png
 
 ## Example
 
 ```js
 var parse = require('ass-parser');
-var restyle = require('ass-restyler');
+var getStyles = require('ass-restyler');
 var stringify = require('ass-stringify');
 
 var subtitle = fs.readFileSync('subtitle.ass', { encoding: 'utf8' });
 var ass = parse(subtitle, { comments: true });
-var restyler = restyle(ass);
+var styles = getStyles(ass);
 
-restyler.set('Default', 'MarginV', 335);
-restyler.set('Default', 'Fontsize', Number(restyler.get('Default', 'Fontsize')) + 10);
+styles.Default.MarginV = 335;
+styles.Default.Fontsize = Number(restyler.Default.Fontsize) + 10;
 
-console.log(stringify(restyler.value));
+console.log(stringify(ass));
 ```
 
 ## API
 
-### `restyler = assRestyler(ass)`
-
-Returns the restyler wrapper for the subtitle.
+### `styles = assStyles(ass)`
 
 `ass` - subtitle in the [ass-parser](https://www.npmjs.com/packages/ass-parser) format.
 
-### `restyler.get(style, property)`
+Returns the object containing all the styles from all the styling sections.
 
-Get value of the property in the specific style.
+`styles[style]` references the original parse tree node, so editing is fully supported.
 
-Return value is a string.
-
-### `restyler.set(style, property, value)`
-
-Set value of the property in the specific style.
-
-If `value` is not a string, it is converted to string.
-
-Returns `restyler`.
-
-### `restyler.value`
-
-Subtitle being edited. It is the same subtitle (same by identity) as in the original `assRestyler` call, saved for convenience.
+`styles[style][attribute]` is a value of the attribute in the specific style. It is usually a string and should always be expected to be a string.
 
 ## References
 
@@ -60,10 +46,16 @@ Subtitle being edited. It is the same subtitle (same by identity) as in the orig
 - [format specification](http://www.perlfu.co.uk/projects/asa/ass-specs.doc)
 - [ASS styles](http://docs.aegisub.org/3.2/Styles/)
 
+## Related
+
+- [ass-restyler](https://www.npmjs.com/packages/ass-restyler) - command line utility for changing SSA/ASS styles.
+- [ass-parser](https://www.npmjs.com/packages/ass-parser) - SSA/ASS parser.
+- [ass-stringify](https://www.npmjs.com/packages/ass-stringify) - stringify SSA/ASS parse tree.
+
 ## Install
 
 ```shell
-npm install ass-restyler
+npm install ass-styles
 ```
 
 ## License

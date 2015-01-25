@@ -1,28 +1,36 @@
 'use strict';
 
-var styleMap = require('./src/stylemap');
 
-
-var protoRestyler = {
-  get: function (style, property) {
-    return this.styles[style][property];
-  },
-
-  set: function (style, property, value) {
-    this.styles[style][property] = String(value);
-    return this;
-  }
+var isStyleSection = function (section) {
+  return /\bStyles\b/.test(section);
 };
 
 
+/**
+ * Make "style map": object that references SSA/ASS styles via style names.
+ *
+ * @arg {string} ass
+ * @return {Object}
+ */
 module.exports = function (ass) {
-  return Object.create(protoRestyler, {
-    value: {
-      enumerable: true,
-      value: ass
-    },
-    styles: {
-      value: styleMap(ass)
+  return ass.reduce(function (styles, section) {
+    if (!isStyleSection(section.section)) {
+      return styles;
     }
-  });
+
+    return section.body.reduce(function (styles, style) {
+      if (style.key != 'Style') {
+        return styles;
+      }
+
+      style = style.value;
+
+      if (styles[style.Name]) {
+        throw new Error('Conflicting styles!');
+      }
+
+      styles[style.Name] = style;
+      return styles;
+    }, styles);
+  }, Object.create(null));
 };
