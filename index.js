@@ -26,7 +26,7 @@ module.exports = function (ass) {
       style = style.value;
 
       if (styles[style.Name]) {
-        throw new Error('Conflicting styles!');
+        console.error('Conflicting styles: ' + style.Name);
       }
 
       styles[style.Name] = style;
